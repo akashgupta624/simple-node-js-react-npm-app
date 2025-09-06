@@ -2,7 +2,7 @@ pipeline {
     agent {
         docker {
             image 'node:lts-buster-slim'
-            args '-v /var/run/docker.sock:/var/run/docker.sock'
+            args '-p 3000:3000'
         }
     }
     environment {
